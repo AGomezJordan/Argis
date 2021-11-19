@@ -1,4 +1,3 @@
-/* eslint-disable */
 export function deepAssign(target, ...nObj) {
   if (!nObj.length) return target;
   const source = nObj.shift();

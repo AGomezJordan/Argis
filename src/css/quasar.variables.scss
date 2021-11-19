@@ -12,13 +12,34 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+$primary   : #2C4459;
+$secondary : #141A26;
+$accent    : #304030;
 
-$dark      : #1D1D1D;
+$dark      : #17181b;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$positive  : #04BF7B;
+$negative  : #880f1e;
+$info      : #248ea3;
+$warning   : #c29a2c;
+
+/* Color Theme Swatches in Hex */
+.Planeta-tierra-Europa-1-hex { color: #141A26; }
+.Planeta-tierra-Europa-2-hex { color: #2C4459; }
+.Planeta-tierra-Europa-3-hex { color: #A8BBBF; }
+.Planeta-tierra-Europa-4-hex { color: #728C8C; }
+.Planeta-tierra-Europa-5-hex { color: #304030; }
+
+/* Color Theme Swatches in RGBA */
+.Planeta-tierra-Europa-1-rgba { color: rgba(20, 26, 38, 1); }
+.Planeta-tierra-Europa-2-rgba { color: rgba(44, 68, 89, 1); }
+.Planeta-tierra-Europa-3-rgba { color: rgba(168, 187, 191, 1); }
+.Planeta-tierra-Europa-4-rgba { color: rgba(114, 140, 140, 1); }
+.Planeta-tierra-Europa-5-rgba { color: rgba(48, 64, 48, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Planeta-tierra-Europa-1-hsla { color: hsla(219, 31, 11, 1); }
+.Planeta-tierra-Europa-2-hsla { color: hsla(208, 33, 26, 1); }
+.Planeta-tierra-Europa-3-hsla { color: hsla(190, 15, 70, 1); }
+.Planeta-tierra-Europa-4-hsla { color: hsla(180, 10, 49, 1); }
+.Planeta-tierra-Europa-5-hsla { color: hsla(120, 14, 21, 1); }

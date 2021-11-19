@@ -1,18 +1,22 @@
-const routes = [
-  {
-    path: '/',
-    component: () => import('src/modules/core/components/layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('src/modules/home/views/Index.vue') },
-    ],
-  },
+import { retRoute, fromObjectToArr } from 'src/utils';
 
-  // Always leave this as last one,
-  // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('src/modules/core/components/error/Error404.vue'),
-  },
+const routes = retRoute(
+  require.context('../modules', true, /^(?!.*(?:store|components)).*index.js$/)
+);
+
+const routesLay = {
+  path: '/',
+  component: () => import('components/layouts/MainLayout.vue'),
+  children: fromObjectToArr(routes),
+};
+
+const routeNotFound = {
+  path: '/:catchAll(.*)*',
+  hidden: true,
+  component: () => import('src/modules/core/components/error/Error404.vue'),
+};
+
+export default [
+  routesLay,
+  routeNotFound
 ];
-
-export default routes;
