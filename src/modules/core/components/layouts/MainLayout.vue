@@ -3,7 +3,13 @@
 
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="miniState = !miniState" />
+        <q-btn
+          dense
+          flat
+          round
+          :icon="miniState ? 'chevron_right' : 'chevron_left'"
+          @click="miniState = !miniState"
+        />
 
         <q-toolbar-title>
           Arcgis Aplication
