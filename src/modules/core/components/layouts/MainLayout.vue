@@ -18,17 +18,17 @@
     </q-header>
 
     <q-drawer
+      class="bg-secondary text-white drawer"
       show-if-above
       :mini="miniState"
-      side="left"
       width="200"
-      dark
     >
       <q-list padding class="menu-list">
         <q-item
           v-for="(route, key) in routes"
           :key="key"
           clickable
+          :class="$route.name === route.name ? 'text-positive' : ''"
           v-ripple
           @click="pushRoute(route)"
         >
@@ -43,6 +43,7 @@
     </q-drawer>
 
     <q-page-container>
+      <Loader v-if="run" />
       <router-view />
     </q-page-container>
 
@@ -50,16 +51,23 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
-import routes from '../../../../router/routes';
+import routes from 'src/router/routes';
+import Loader from 'components/loader/views';
+import { mapState } from 'vuex';
 
-export default defineComponent({
+export default{
   name: 'MainLayout',
-  setup () {
+  components: {
+    Loader
+  },
+  data () {
     return {
-      miniState: ref(true),
+      miniState: true,
       routes: [],
     }
+  },
+  computed: {
+    ...mapState('loader', ['run']),
   },
   created() {
     this.routes = routes.filter(e => e.hidden !== true)[0].children;
@@ -69,8 +77,11 @@ export default defineComponent({
       this.$router.push('/' + route.path);
     }
   }
-});
+};
 </script>
 
 <style scoped>
+.drawer {
+  height: 600px;
+}
 </style>
