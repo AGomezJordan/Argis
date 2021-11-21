@@ -1,22 +1,20 @@
-# Quasar App (arcgis)
+# ArcGIS Aplication
 
-A Quasar Framework app
+This aplication was created for test ArcGIS.js library.
 
 ## Install the dependencies
 ```bash
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Start the app in development mode
 ```bash
-quasar dev
+npm run dev
 ```
 
 
 ### Build the app for production
+*Now it`s not available
 ```bash
-quasar build
+npm run build
 ```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).

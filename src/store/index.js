@@ -6,10 +6,15 @@ export const {
   state, getters, actions, mutations,
 } = common;
 
-const modules = retMod(
+let modules = retMod(
   require.context('../modules', true, /^(?!.*(?:router|core)).*index.js$/),
 );
 
+const components = retMod(
+  require.context('../modules/core/components', true, /^(?!.*(?:router|core)).*index.js$/),
+);
+
+modules = { ...modules, ...components };
 const store = new Vuex.Store({
   modules,
   state,

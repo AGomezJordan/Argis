@@ -4,7 +4,7 @@ const routes = [
       name: 'Maps',
       icon: 'map',
       hidden: false,
-      component: () => import('modules/maps/views/Index.vue')
+      component: () => import('modules/maps/views/index.vue')
     },
 ];
 

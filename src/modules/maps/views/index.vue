@@ -1,21 +1,41 @@
 <template>
-  <q-page class="flex flex-center">
-    <Map :key="key" />
+  <q-page>
+    <q-tabs
+        v-model="tab"
+        class="bg-dark text-white"
+      >
+        <q-tab name="fm" label="First Map" />
+        <q-tab name="sm" label="Second Map" />
+      </q-tabs>
+      <div v-if="tab === 'fm'" class="mapContainer">
+        <FirstMap />
+      </div>
+      <div v-if="tab === 'sm'" class="mapContainer">
+        <SecondMap />
+      </div>
   </q-page>
 </template>
 
 <script>
-import Map from 'components/maps/ViewMap';
+import FirstMap from 'components/maps/FirstMap';
+import SecondMap from 'components/maps/SecondMap';
 
 export default {
   name: 'Maps',
   components: {
-    Map,
+    FirstMap,
+    SecondMap,
   },
   data() {
     return {
-      key: "41281c51f9de45edaf1c8ed44bb10e30",
+      tab: 'sm'
     };
-  }
+  },
 };
 </script>
+<style scoped>
+.mapContainer {
+  width: 100%;
+  height: 87.8vh;
+}
+</style>
