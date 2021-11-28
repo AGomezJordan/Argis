@@ -1,6 +1,5 @@
 <template>
-  <q-layout view="lHh lpR lFf">
-
+  <q-layout view="lHh Lpr lff" container style="height: 100vh">
     <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-btn
@@ -43,8 +42,10 @@
     </q-drawer>
 
     <q-page-container>
-      <Loader v-if="run" />
-      <router-view />
+      <q-page>
+        <Loader v-if="run" />
+        <router-view />
+      </q-page>
     </q-page-container>
 
   </q-layout>
@@ -83,5 +84,6 @@ export default{
 <style scoped>
 .drawer {
   height: 600px;
+  border: 1px solid red;
 }
 </style>

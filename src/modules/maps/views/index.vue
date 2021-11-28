@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <div>
     <q-tabs
         v-model="tab"
         class="bg-dark text-white"
@@ -13,7 +13,7 @@
       <div v-if="tab === 'sm'" class="mapContainer">
         <SecondMap />
       </div>
-  </q-page>
+  </div>
 </template>
 
 <script>
