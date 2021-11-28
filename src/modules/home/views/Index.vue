@@ -1,58 +1,7 @@
 <template>
-  <q-page class="flex">
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-  </q-page>
+  <div class="flex">
+    <h1 v-for="n in 50" :key="n">hola</h1>
+  </div>
 </template>
 
 <script>
